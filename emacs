@@ -13,7 +13,7 @@
 (add-hook 'c-mode-hook '(lambda ()
       (local-set-key (kbd "RET") 'newline-and-indent)))
 (setq-default indent-tabs-mode nil)
-(setq tab-width 4)
+(setq-default tab-width 4)
 (setq sentence-end-double-space nil)
 (setq-default indicate-empty-lines t)
 (global-linum-mode 1)
@@ -63,7 +63,7 @@
 (setq-default indent-tabs-mode nil)
 (setq apropos-do-all t
       save-place-file (concat user-emacs-directory "places")
-      backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))
+      backup-directory-alist `((".*" . ,(concat user-emacs-directory "backups"))))
 
 ;; (global-set-key "\M-/" 'hippie-expand)
 (global-set-key "\C-x\C-b" 'ibuffer)
@@ -81,3 +81,12 @@
 (require 'autopair)
 (autopair-global-mode)
 ;; (load-file "~/tmp/emacs/emacs-for-python/epy-init.el")
+(remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
+
+(add-to-list 'load-path "~/Develop/emacs-fish")
+(require 'fish-mode)
+
+(visual-line-mode)
+
+(setq-default c-default-style "linux")
+(setq-default c-basic-offset 4)
