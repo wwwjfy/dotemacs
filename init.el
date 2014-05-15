@@ -69,7 +69,7 @@
       backup-directory-alist `((".*" . ,(concat user-emacs-directory "backups/")))
       auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "backups/") t)))
 
-;; (global-set-key "\M-/" 'hippie-expand)
+(global-set-key "\M-/" 'hippie-expand)
 (global-set-key "\C-x\C-b" 'ibuffer)
 
 (global-set-key "\C-s" 'isearch-forward-regexp)
@@ -77,14 +77,17 @@
 (global-set-key "\C-\M-s" 'isearch-forward)
 (global-set-key "\C-\M-r" 'isearch-backward)
 
+(add-to-list 'load-path "~/.emacs.d")
 (require 'auto-complete-config)
+;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
+(ac-set-trigger-key "TAB")
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
 (require 'autopair)
 (autopair-global-mode)
-;; (load-file "~/tmp/emacs/emacs-for-python/epy-init.el")
+; (load-file "~/tmp/emacs/emacs-for-python/epy-init.el")
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
 (add-to-list 'load-path "~/Develop/emacs-fish")
@@ -96,9 +99,9 @@
 (setq-default c-basic-offset 4)
 
 ;; org-mode
-(require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+;(require 'org)
+;(define-key global-map "\C-cl" 'org-store-link)
+;(define-key global-map "\C-ca" 'org-agenda)
+;(setq org-log-done t)
 
 (add-to-list 'auto-mode-alist '("\\.fish$" . fish-mode))
