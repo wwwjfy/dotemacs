@@ -105,3 +105,6 @@
 ;(setq org-log-done t)
 
 (add-to-list 'auto-mode-alist '("\\.fish$" . fish-mode))
+
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode)
