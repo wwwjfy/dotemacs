@@ -77,7 +77,8 @@
 (global-set-key "\C-\M-s" 'isearch-forward)
 (global-set-key "\C-\M-r" 'isearch-backward)
 
-(add-to-list 'load-path "~/.emacs.d")
+(global-set-key "\C-xw" 'visual-line-mode)
+
 (require 'auto-complete-config)
 ;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (ac-config-default)
