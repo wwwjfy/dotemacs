@@ -19,11 +19,14 @@
 (global-linum-mode 1)
 (setq blink-matching-paren-distance nil)
 (setq show-paren-style 'expression)
+(setq vc-follow-symlinks t)
 
 (require 'package)
 (add-to-list 'package-archives 
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
 
 (load-theme 'solarized-dark 1)
@@ -63,7 +66,8 @@
 (setq-default indent-tabs-mode nil)
 (setq apropos-do-all t
       save-place-file (concat user-emacs-directory "places")
-      backup-directory-alist `((".*" . ,(concat user-emacs-directory "backups"))))
+      backup-directory-alist `((".*" . ,(concat user-emacs-directory "backups/")))
+      auto-save-file-name-transforms `((".*" ,(concat user-emacs-directory "backups/") t)))
 
 ;; (global-set-key "\M-/" 'hippie-expand)
 (global-set-key "\C-x\C-b" 'ibuffer)
@@ -90,3 +94,11 @@
 
 (setq-default c-default-style "linux")
 (setq-default c-basic-offset 4)
+
+;; org-mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+
+(add-to-list 'auto-mode-alist '("\\.fish$" . fish-mode))
