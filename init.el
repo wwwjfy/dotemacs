@@ -109,3 +109,11 @@
 
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
+
+(defun beginning-of-line-or-first-char ()
+  (interactive)
+  (let ((oldcol (current-column)))
+    (back-to-indentation)
+    (if (= oldcol (current-column))
+        (beginning-of-line))))
+(global-set-key "\C-a" 'beginning-of-line-or-first-char)
