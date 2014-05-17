@@ -1,3 +1,4 @@
+;;; Basic configuration
 (global-hl-line-mode 1)
 (setq inhibit-startup-message 1)
 (setq scroll-step 1)
@@ -21,6 +22,9 @@
 (setq show-paren-style 'expression)
 (setq vc-follow-symlinks t)
 
+(add-to-list 'load-path "~/.emacs.d")
+
+;;; third-party package
 (require 'package)
 (add-to-list 'package-archives 
     '("marmalade" .
@@ -86,9 +90,6 @@
 
 (global-set-key (kbd "RET") 'newline-and-indent)
 
-(require 'autopair)
-(autopair-global-mode)
-; (load-file "~/tmp/emacs/emacs-for-python/epy-init.el")
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
 (add-to-list 'load-path "~/Develop/emacs-fish")
@@ -117,3 +118,5 @@
     (if (= oldcol (current-column))
         (beginning-of-line))))
 (global-set-key "\C-a" 'beginning-of-line-or-first-char)
+
+(load "init-smartparens")
