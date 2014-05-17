@@ -120,3 +120,6 @@
 (global-set-key "\C-a" 'beginning-of-line-or-first-char)
 
 (load "init-smartparens")
+
+(require 'fic-mode)
+(turn-on-fic-mode)
