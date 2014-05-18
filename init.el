@@ -22,7 +22,7 @@
 (setq show-paren-style 'expression)
 (setq vc-follow-symlinks t)
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/init")
 
 ;;; third-party package
 (require 'package)
