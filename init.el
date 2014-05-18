@@ -123,3 +123,7 @@
 
 (require 'fic-mode)
 (turn-on-fic-mode)
+
+(require 'whitespace)
+(global-whitespace-mode)
+(setq whitespace-style '(face spaces tabs trailing space-mark))
