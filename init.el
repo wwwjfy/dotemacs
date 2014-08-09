@@ -92,9 +92,6 @@
 
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
-(add-to-list 'load-path "~/Develop/emacs-fish")
-(require 'fish-mode)
-
 (visual-line-mode)
 
 (setq-default c-default-style "linux")
@@ -105,8 +102,6 @@
 ;(define-key global-map "\C-cl" 'org-store-link)
 ;(define-key global-map "\C-ca" 'org-agenda)
 ;(setq org-log-done t)
-
-(add-to-list 'auto-mode-alist '("\\.fish$" . fish-mode))
 
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
@@ -120,6 +115,7 @@
 (global-set-key "\C-a" 'beginning-of-line-or-first-char)
 
 (load "init-smartparens")
+(load "myloaddefs")
 
 (require 'fic-mode)
 (turn-on-fic-mode)
@@ -127,3 +123,5 @@
 (require 'whitespace)
 (global-whitespace-mode)
 (setq whitespace-style '(face spaces tabs trailing space-mark))
+
+(add-to-list 'load-path "~/Develop/emacs-fish")
