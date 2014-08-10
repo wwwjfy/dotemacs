@@ -26,7 +26,7 @@
 
 ;;; third-party package
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
@@ -115,7 +115,6 @@
 (global-set-key "\C-a" 'beginning-of-line-or-first-char)
 
 (load "init-smartparens")
-(load "myloaddefs")
 
 (require 'fic-mode)
 (turn-on-fic-mode)
@@ -123,5 +122,3 @@
 (require 'whitespace)
 (global-whitespace-mode)
 (setq whitespace-style '(face spaces tabs trailing space-mark))
-
-(add-to-list 'load-path "~/Develop/emacs-fish")
