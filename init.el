@@ -88,7 +88,12 @@
 (ac-config-default)
 (ac-set-trigger-key "TAB")
 
+(defun join-next-line ()
+  (interactive)
+  (next-line)
+  (join-line))
 (global-set-key (kbd "RET") 'newline-and-indent)
+(global-set-key "\C-j" 'join-next-line)
 
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
 
