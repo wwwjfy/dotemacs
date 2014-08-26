@@ -161,3 +161,4 @@ unc\\(?:ed\\|save\\|tions?\\)\\)\\|h\\(?:elp\\|istory\\)\\|i\\(?:f\\|satty\\)\\|
 (provide 'fish-mode)
 
 ;;; fish-mode.el ends here
+ 

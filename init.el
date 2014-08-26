@@ -127,3 +127,17 @@
 (require 'whitespace)
 (global-whitespace-mode)
 (setq whitespace-style '(face spaces tabs trailing space-mark))
+
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+
+(require 'flx-ido)
+(ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-enable-flex-matching t)
+(setq ido-use-faces nil)
+
+(require 'helm-config)
+(helm-mode 1)
