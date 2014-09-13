@@ -141,3 +141,7 @@
 
 (require 'helm-config)
 (helm-mode 1)
+
+(global-undo-tree-mode)
+
+(global-set-key "\C-x\C-\\" 'goto-last-change)
