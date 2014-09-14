@@ -7,7 +7,6 @@
 (setq visible-bell t)
 (global-font-lock-mode 1)
 (menu-bar-mode -1)
-(line-number-mode 1)
 (column-number-mode 1)
 (setq-default fill-column 80)
 (setq auto-fill-mode 1)
@@ -17,7 +16,6 @@
 (setq-default tab-width 4)
 (setq sentence-end-double-space nil)
 (setq-default indicate-empty-lines t)
-(global-linum-mode 1)
 (setq blink-matching-paren-distance nil)
 (setq show-paren-style 'expression)
 (setq vc-follow-symlinks t)
@@ -145,3 +143,6 @@
 (global-undo-tree-mode)
 
 (global-set-key "\C-x\C-\\" 'goto-last-change)
+
+(setq nlinum-format "%d ")
+(global-nlinum-mode)
