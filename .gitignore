@@ -7,3 +7,6 @@ places
 url
 *.elc
 archives
+ido.last
+projectile*
+.mc-lists.el
