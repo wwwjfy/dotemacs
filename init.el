@@ -124,7 +124,7 @@
 
 (require 'whitespace)
 (global-whitespace-mode)
-(setq whitespace-style '(face spaces tabs trailing space-mark))
+(setq whitespace-style '(face spaces tabs trailing))
 
 (projectile-global-mode)
 (setq projectile-enable-caching t)
