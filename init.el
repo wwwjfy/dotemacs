@@ -149,3 +149,6 @@
 
 (global-set-key (kbd "C-c f") 'iy-go-to-char)
 (global-set-key (kbd "C-c F") 'iy-go-to-char-backward)
+
+(custom-set-faces
+ '(whitespace-trailing ((t (:background "#cd0000")))))
