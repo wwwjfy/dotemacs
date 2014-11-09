@@ -107,8 +107,7 @@
 ;(define-key global-map "\C-ca" 'org-agenda)
 ;(setq org-log-done t)
 
-(require 'rainbow-delimiters)
-(global-rainbow-delimiters-mode)
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
 
 (defun beginning-of-line-or-first-char ()
   (interactive)
