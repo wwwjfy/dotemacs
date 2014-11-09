@@ -19,6 +19,7 @@
 (setq blink-matching-paren-distance nil)
 (setq show-paren-style 'expression)
 (setq vc-follow-symlinks t)
+(setq confirm-nonexistent-file-or-buffer nil)
 
 (add-to-list 'load-path "~/.emacs.d/init")
 
