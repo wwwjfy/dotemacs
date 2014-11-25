@@ -8,5 +8,5 @@ url
 *.elc
 archives
 ido.last
-projectile*
+/projectile*
 .mc-lists.el
