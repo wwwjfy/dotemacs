@@ -8,7 +8,7 @@
 (global-font-lock-mode 1)
 (menu-bar-mode -1)
 (column-number-mode 1)
-(setq-default fill-column 80)
+(setq-default fill-column 79)
 (setq auto-fill-mode 1)
 (add-hook 'c-mode-hook '(lambda ()
       (local-set-key (kbd "RET") 'newline-and-indent)))
