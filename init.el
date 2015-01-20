@@ -10,8 +10,6 @@
 (column-number-mode 1)
 (setq-default fill-column 79)
 (setq auto-fill-mode 1)
-(add-hook 'c-mode-hook '(lambda ()
-      (local-set-key (kbd "RET") 'newline-and-indent)))
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq sentence-end-double-space nil)
@@ -91,7 +89,6 @@
   (interactive)
   (next-line)
   (join-line))
-(global-set-key (kbd "RET") 'newline-and-indent)
 (global-set-key "\C-j" 'join-next-line)
 
 (remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
