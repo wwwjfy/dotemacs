@@ -26,7 +26,10 @@
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
-(load-theme 'solarized-dark t)
+(add-to-list 'load-path "~/.emacs.d/init")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+(set-terminal-parameter nil 'background-mode 'dark)
+(load-theme 'solarized t)
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
