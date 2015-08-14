@@ -2,7 +2,6 @@
 (global-hl-line-mode 1)
 (setq inhibit-startup-message 1)
 (setq scroll-step 1)
-(setq-default indent-tabs-mode nil)
 (setq make-backup-files nil)
 (setq visible-bell t)
 (global-font-lock-mode 1)
@@ -24,10 +23,7 @@
 ;;; third-party package
 (require 'package)
 (add-to-list 'package-archives
-    '("marmalade" .
-      "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (package-initialize)
 
 (load-theme 'solarized-dark t)
