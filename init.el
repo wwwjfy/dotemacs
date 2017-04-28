@@ -148,4 +148,16 @@
 (global-set-key (kbd "C-c F") 'iy-go-to-char-backward)
 
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(whitespace-trailing ((t (:background "#cd0000")))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (less-css-mode multiple-cursors magit markdown-mode projectile rainbow-delimiters with-editor async dash git-commit helm org smartparens undo-tree smex nlinum mo-git-blame iy-go-to-char goto-last-change go-mode gitconfig-mode flx-ido fish-mode fill-column-indicator fic-mode f auto-complete ag))))
